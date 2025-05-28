@@ -1,0 +1,13 @@
+.projects-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .project-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    width: 250px;
+  }

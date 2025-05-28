@@ -1,0 +1,82 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FF9B0B;
+    padding: 10px 30px;
+    color: white;
+}
+
+.navbar-logo img {
+    height: 50px;
+}
+
+.navbar-links ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    margin-right: 20px;
+}
+
+.navbar-links a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.navbar-links a:hover {
+    color: #000000;
+}
+
+.menu-icon {
+    display: none; /* Escondido por padrão em desktop */
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+}
+
+.menu-icon .bar {
+    width: 100%;
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none; /* Esconde os links em mobile por padrão */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 70px; /* Ajuste conforme a altura do seu navbar */
+        left: 0;
+        background-color: #d88511;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .navbar-links.active {
+        display: flex; /* Mostra os links quando o menu está aberto */
+    }
+
+    .navbar-links ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-links li {
+        margin: 10px 0;
+    }
+
+    .menu-icon {
+        display: flex; /* Mostra o ícone do menu em mobile */
+    }
+}
